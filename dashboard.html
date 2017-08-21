@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="antrianApp">
+<head>
+	<title ng-controller="dashTitle">{{ username }} | E-Antrian</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/antrian.css">
+    <script src="assets/js/angular.min.js" charset="utf-8"></script>
+    <script src="assets/js/angular-route.min.js" charset="utf-8"></script>
+    <script src="assets/js/angular-cookies.min.js" charset="utf-8"></script>
+    <script src="assets/js/jquery.min.js" charset="utf-8"></script>
+    <script src="assets/js/antrian_dash.js" charset="utf-8"></script>
+</head>
+<body>
+	<nav ng-controller="cekSesi" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">E-Antrian</a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#" ng-controller="dashTitle"><span class="fa fa-user-o fa-lg"></span>&nbsp;{{ username }}</a></li>
+				<li><a href="javascript:void(0);" ng-click="logout()" ><span class="fa fa-sign-out fa-lg"></span>&nbsp;Logout</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="space"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="wrapper">
+					<h2 align="center">E-Antrian</h2>
+					<hr>
+					<div class="row">
+						<div class="col-sm-3">
+							<ul id="menu" ng-controller="urlCheck" class="nav nav-pills nav-stacked">
+								<li id="antrian_cs"><a href="#"><span class="fa fa-ticket fa-lg"></span>&nbsp;Antrian - CS</a></li>
+								<li id="antrian_teller"><a href="#!/antrian_teller"><span class="fa fa-ticket fa-lg"></span>&nbsp;Antrian - Teller</a></li>
+								<li id="daftar_antrian"><a href="#!/daftar_antrian"><span class="fa fa-list fa-lg"></span>&nbsp;Daftar antrian</a></li>
+								<li id="daftar_user"><a href="#!/daftar_user"><span class="fa fa-user-circle-o fa-lg"></span>&nbsp;Daftar user</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-9">
+							<div ng-view></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

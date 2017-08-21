@@ -1,0 +1,109 @@
+/*body {
+	margin : 0;
+	padding : 0;
+	font-family : Arial;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin : 0;
+	padding : 0;
+	font-weight : normal !important;
+}
+
+hr {
+	border-style : none;
+	border : .1px solid white;
+	margin : 0;
+	padding : 0;
+}*/
+
+.card {
+	background : #03c791;
+	margin : 0;
+	margin-bottom: 15px;
+	min-width : 240px;
+	max-width : 100%;
+	height : 255px;
+	border-radius : 15px;
+	overflow : hidden;
+	box-shadow : 0px 0px 3px 1px rgba(0, 0, 0, 0.34);
+	box-sizing : border-box;
+}
+
+.img-container {
+	margin : 0;
+	height : 160px;
+	width : 100%;
+	overflow : hidden;
+	border-bottom : 4px solid #01af77;
+}
+
+.img-container img {
+	width : 100%;
+	height : auto;
+	box-sizing : border-box;
+}
+
+.text-wrapper {
+	background : rgba(0, 0, 0, 0.25);
+	padding-top : 5px;
+	padding-bottom : 5px;
+}
+
+.remove-dialog {
+	margin : 5px;
+	background : rgba(255, 255, 255, 0.5);
+	width: 135px;
+	position :absolute;
+	text-align : right;
+	z-index : 100;
+	box-sizing : border-box;
+	text-decoration : none;
+	color : maroon;
+	font-size : 15px;
+	padding: 7px;
+	border-radius : 30px;
+	border-style: none;
+	transition: .5s ease;
+}
+
+.remove-user {
+	margin : 5px;
+	background : rgba(255, 255, 255, 0.5);
+	width: 35px;
+	position :absolute;
+	text-align : center;
+	z-index : 1000;
+	box-sizing : border-box;
+	text-decoration : none;
+	color : maroon;
+	font-size : 25px;
+	border-radius : 30px;
+	border-style: none;
+	transition: .5s ease;
+}
+
+.remove-user:hover {
+	background: rgba(255, 255, 255, 0.35);
+	text-decoration: none;
+	color : red;
+	transition: .5s ease;
+}
+
+.username {
+	margin : 0;
+	padding : 10px 5px;
+	width : 100%;
+	text-align : center;
+	box-sizing : border-box;
+	color : white;
+	font-size : 30px;
+}
+
+.level {
+	margin : 0 auto;
+	width : 100%;
+	box-sizing : border-box;
+	text-align : center;
+	color : #f3f3f3;
+}

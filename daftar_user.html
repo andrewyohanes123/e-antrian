@@ -1,0 +1,74 @@
+<div class="row">
+	<div class="col-sm-6">
+		<form class="form-group">
+			<div class="input-group">
+				<span class="input-group-addon">
+					<span class="fa fa-user fa-lg"></span>
+				</span>
+				<input type="text" class="form-control" ng-model="username" placeholder="Username">
+			</div>
+			<br>
+			<div id="password">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="fa fa-key fa-lg"></span>
+					</span>
+					<input type="password" class="form-control" ng-model="password" placeholder="Password">
+				</div>
+				<br>
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="fa fa-key fa-lg"></span>
+					</span>
+					<input type="password" class="form-control" ng-model="password2" placeholder="Ulangi password">
+				</div>
+				<input type="hidden" ng-model="id" name="">
+			</div>
+			<hr>
+			<button id="tambah" class="btn btn-success" ng-click="tambahUser()" type="submit"><span class="fa fa-plus-circle fa-lg"></span>&nbsp;Tambah</button>
+			<div class="btn-group" id="button_pass">
+				<button ng-click="updateUser()" class="btn btn-default"><span class="fa fa-save fa-lg"></span>&nbsp;Simpan</button>
+				<button id="rubah_pass" class="btn btn-primary"><span class="fa fa-key fa-lg"></span>&nbsp;Rubah password</button>
+				<button id="batal" class="btn btn-danger"><span class="fa fa-times-circle fa-lg"></span>&nbsp;Batal</button>
+			</div>
+		</form>
+		<br>
+		<br>
+		<h4 id="not_found" class="alert alert-danger">
+			
+		</h4>
+		<h4 id="found" class="alert alert-success">
+			<span class="fa fa-check fa-lg"></span>&nbsp;Loading...
+		</h4>
+	</div>
+	<div class="col-sm-6">
+		<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th><span class="fa fa-sort fa-lg"></span>&nbsp;No.</th>
+						<th><span class="fa fa-user-o fa-lg"></span>&nbsp;Username</th>
+						<th><span class="fa fa-edit fa-lg"></span>&nbsp;Edit/&nbsp;<span class="fa fa-remove fa-lg"></span>&nbsp;Hapus</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-hide="dataLength > 0"><td colspan="3" align="center"><b>Tidak ada user</b></td></tr>
+					<tr ng-repeat="daftar in daftarUser">
+						<td>{{ daftarUser.indexOf(daftar) + 1 }}</td>
+						<td>{{ daftar.username }}</td>
+						<td>
+							<div ng-show="id_user != daftar.id_user" class="btn-group">
+								<button disabled="disabled" class="btn btn-warning btn-sm" title="Edit user {{ daftar.username }}" ng-click="editUser(daftar.id_user, daftar.username)"><span class="fa fa-edit fa-lg"></span></button>
+								<button class="btn btn-danger btn-sm" title="Hapus user {{ daftar.username }}" ng-click="deleteUser(daftar.id_user)"><span class="fa fa-trash fa-lg"></span></button>
+							</div>
+							<div ng-show="id_user == daftar.id_user" class="btn-group">
+								<button class="btn btn-warning btn-sm" title="Edit user {{ daftar.username }}" ng-click="editUser(daftar.id_user, daftar.username)"><span class="fa fa-edit fa-lg"></span></button>
+								<button disabled="disabled" class="btn btn-danger btn-sm" title="Hapus user {{ daftar.username }}" ng-click="deleteUser(daftar.id_user)"><span class="fa fa-trash fa-lg"></span></button>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="antrianApp">
+  <head>
+    <meta charset="utf-8">
+    <title ng-controller="title">{{ title }}</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/antrian.css">
+    <script src="assets/js/angular.min.js" charset="utf-8"></script>
+    <script src="assets/js/angular-route.min.js" charset="utf-8"></script>
+    <script src="assets/js/angular-cookies.min.js" charset="utf-8"></script>
+    <script src="assets/js/jquery.min.js" charset="utf-8"></script>
+    <script src="assets/js/antrian.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="antrianController">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <!--  -->
+          <div class="col-md-6">
+            <div class="wrapper" ng-controller="antrianController">
+              <center ng-hide="no_antri != null"><h2><span class="fa fa-ticket fa-lg"></span>&nbsp;Ambil nomor antrian</h2></center>
+              <center ng-hide="no_antri == null"><h2><span class="fa fa-ticket fa-lg"></span>&nbsp;Nomor antrian Anda</h2></center>
+              <hr>
+
+              <center><h1>{{ antrian }}</h1></center>
+              <!--  -->
+              <div class="row" id="ambil_antri" ng-hide="no_antri != null">
+                <div class="col-sm-6">
+                  <div class="wrapper cs">
+                    <h3 class="tengah">Customer Service</h3>
+                    <hr>
+                    <div class="input-group">
+                      <span class="input-group-addon"><span class="fa fa-phone fa-lg"></span></span>
+                      <input ng-model="nomorTelp" type="number" class="form-control" placeholder="Masukkan nomor telepon" name="" value="">
+                    </div>
+                    <br>
+                    <button ng-click="kirimDataCs()" type="button" class="ambil">ambil nomor</button>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="col-sm-6">
+                  <div class="wrapper teller">
+                    <h3 class="tengah">Teller</h3>
+                    <hr>
+                    <div class="input-group">
+                      <span class="input-group-addon"><span class="fa fa-phone fa-lg"></span></span>
+                      <input ng-model="nomorTelp2" type="text" class="form-control" placeholder="Masukkan nomor telepon" name="" value="">
+                    </div>
+                    <br>
+                    <button ng-click="kirim_data_teller()" type="button" class="ambil" name="button">ambil nomor</button>
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+              <!--  -->
+            </div>
+          </div>
+          <!--  -->
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+      <nav class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+          <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">e-Antrian</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="login.html"><span class="fa fa-sign-in fa-lg"></span>&nbsp;Login</a></li>
+          </ul>
+        </div>
+      </nav>
+  </body>
+</html>

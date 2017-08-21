@@ -1,0 +1,32 @@
+<div class="table-responsive">
+	<table class="table table-bordered table-striped table-hover">
+		<thead>
+			<tr>
+				<th>No.</th>
+				<th>Nomor antrian</th>
+				<th>Nomor telp. pengantri</th>
+				<th>Layani/Tidak terlayani</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-hide="besarData != 0"><td colspan="4"><center><b>Tidak ada antrian</b></center></td></tr>
+			<tr ng-repeat="antrian in antrianCS">
+				<td>{{ antrianCS.indexOf(antrian) + 1 }}</td>
+				<td>{{ antrian.id_antrian }}</td>
+				<td>{{ antrian.notelp_pengantri }}</td>
+				<td>
+					<div ng-hide="antrianCS.indexOf(antrian) != 0" class="btn-group">
+						<button class="btn btn-success" ng-click="layani(antrian.id_antrian)"><span class="fa fa-sort fa-lg"></span>&nbsp;Layani</button>
+						<button class="btn btn-danger"><span class="fa fa-times-circle-o fa-lg"></span>&nbsp;Tidak ada</button>
+						<button class="btn btn-primary" id="btnSelesai"><span class="fa fa-check fa-lg"></span>&nbsp;Selesai</button>
+					</div>
+					<div ng-hide="antrianCS.indexOf(antrian) == 0" class="btn-group">
+						<button class="btn btn-success" disabled="disabled"><span class="fa fa-sort fa-lg"></span>&nbsp;Layani</button>
+						<button class="btn btn-danger" disabled="disabled"><span class="fa fa-times-circle-o fa-lg"></span>&nbsp;Tidak ada</button>
+						<button class="btn btn-primary" disabled=""><span class="fa fa-check fa-lg"></span>&nbsp;Selesai</button>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

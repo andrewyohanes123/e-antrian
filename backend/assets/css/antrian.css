@@ -1,0 +1,50 @@
+.wrapper {
+  background: #ededed;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  padding: 15px;
+  margin: 10px;
+}
+
+.cs {
+  background: #a6e2b7;
+  border: none;
+}
+
+.teller {
+  background : rgb(158, 218, 237);
+  border: none;
+}
+
+.ambil {
+  background: #3dbbb8;
+  padding: 8px;
+  margin: -5px auto;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #013d41;
+  outline: none;
+}
+
+.ambil:hover {
+  border-bottom: 3px solid #013d41;
+  padding: 6.5px;
+}
+
+.ambil:active {
+  background: #09476f;
+  color: white;
+  outline: none;
+}
+
+.wrapper hr {
+  border: 1px solid #82bf87;
+}
+
+.wrapper .tengah {
+  text-align: center;
+  font-size: 19px;
+  margin: 0 auto;
+}

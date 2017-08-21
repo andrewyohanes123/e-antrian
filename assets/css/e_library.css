@@ -1,0 +1,356 @@
+/**/
+textarea {
+  resize: none;
+}
+
+@font-face {
+  font-family : 'SegoeUILight';
+  src: url(../fonts/segoeuil.ttf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SegoeUILight';
+}
+
+.space {
+  height: 55px;
+}
+/**/
+.navbar-inverse {
+  background: darkslategray;
+  border-radius: 0px;
+  border: none;
+  border-bottom: 5px solid #162d2d;
+  margin-bottom: 0px;
+}
+
+.alert {
+  cursor: pointer;
+}
+
+.nav, .navbar-nav, .navbar-right {
+  color : white;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color : white;
+  transition: .5s ease all;
+}
+
+.navbar-inverse .navbar-nav li a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color : white;
+  transition: .5s ease all;
+}
+
+.navbar-inverse .navbar-nav li a:last-child(odd){
+  border : none;
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+}
+
+.back {
+  background: rgba(0, 0, 0, 0.73);
+  border: rgba(0, 0, 0, 0.1) solid 1px;
+}
+
+.logo {
+  color : white;
+  text-align: center;
+}
+
+.panel_buku {
+  background: rgba(0, 0, 0, 0.45);
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+}
+
+.login_user {
+  background-image: url(../img/jmb_bg.jpg), linear-gradient(to left, rgb(7, 83, 163), rgb(10, 169, 191));
+  background-position: right;
+  background-size: cover;
+  background-blend-mode: multiply;
+  border: #3498db solid 0px;
+  color : white;
+}
+
+.login_user .input-group-addon {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  color : white;
+  text-shadow: none;
+}
+
+.login_pembaca {
+  background-image: url(../img/bg2.jpg), linear-gradient(to right, rgb(193, 57, 43), rgb(143, 22, 9));
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  border: #e74c3c;
+  color : white;
+  text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+}
+
+.login_pembaca .input-group-addon {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  color : white;
+  text-shadow: none;
+}
+
+.menu_panel {
+  color: white;
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(0, 0, 0, 0.34);
+}
+
+.user_menu {
+  background: transparent;
+  margin: -20px;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  border: none;
+  border-radius: 0px;
+  transition: .5s ease all;
+}
+
+.menus {
+  font-size: 18px;
+  color : white;
+}
+
+.menus:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.user_menu:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transition: .5s ease all;
+}
+
+/* *** */
+.main-panel {
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 1px 1px 14px 5px rgba(0, 0, 0, 0.35);
+  border-radius: 5px;
+  border: none;
+  color: white;
+}
+
+.panel-kiri {
+  margin-right: calc(-15px);
+  padding: 15px;
+  height: 100%;
+}
+
+.panel-kanan {
+  margin-left: calc(-15px);
+  padding: 20px;
+  padding-top: 5px;
+  height: 100%;
+  border-left: 1px solid grey;
+}
+
+/* *** */
+
+.kategori {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 15px;
+  padding-top: calc(15px);
+  padding-left: calc(20px);
+  border-radius: 0px;
+  margin-top: 0px;
+  margin-bottom: calc(2px);
+  margin-left: calc(-25px);
+  margin-right: calc(-15px);
+  transition: .5s ease background;
+}
+
+.kategori:hover {
+  background: rgba(0, 0, 0, 0.55);
+  border-right: 3px solid maroon;
+  transition: .5s ease background;
+}
+
+#kategori_buku a:hover {
+  text-decoration: none;
+}
+
+.foto-profil {
+  width: 40px;
+  height: auto;
+}
+
+/**/
+
+.buku {
+  color: white;
+  background: maroon;
+  border: 1px solid red;
+}
+
+
+/**/
+
+.menu-dropdown {
+  color: white;
+  background: rgba(10, 249, 134, 0.35);
+  list-style: none;
+  border-bottom: 3px solid rgb(10, 249, 134);
+}
+
+.menu-dropdown li a {
+  color : white;
+  margin: 0px !important;
+  width: 100%;
+  padding-left: 0px !important;
+}
+
+.menu-dropdown a:hover {
+  transition: .5s ease;
+}
+
+.sidebar-brand {
+  text-indent: 30px !important;
+}
+/**/
+.jlh-buku {
+  background-color: #c0392b;
+  border:  #c42929 .5px solid;
+  color: white;
+  font-family: 'SegoeUILight';
+}
+
+.jlh-buku h1 {
+  font-size: 45px;
+  font-family: 'SegoeUILight';
+}
+
+.jlh-pembaca {
+  color: white;
+  background: rgb(11, 177, 84);
+  border: rgb(108, 228, 161) 1px solid;
+  font-family: 'SegoeUILight';
+}
+
+.jlh-pembaca h1 {
+  font-size: 45px;
+  font-family: 'SegoeUILight';
+  font-weight: lighter;
+}
+
+.jlh-musik {
+  color: white;
+  font-family: 'SegoeUILight';
+  background: rgb(11, 117, 177);
+  border: rgb(49, 143, 196) 1px solid;
+}
+
+.jlh-musik h1 {
+  font-size: 45px;
+  font-family: 'SegoeUILight';
+}
+
+/**/
+
+.shadow {
+  box-shadow: 0px 0px 12px 7px rgba(0, 0, 0, 0.25);
+}
+
+/**/
+
+.breadcrumb {
+  background: #079466;
+}
+
+.breadcrumb a {
+  color : white;
+  text-decoration: none;
+}
+
+/**/
+.jumbotron {
+  background-image : linear-gradient(to right, #04784b , #0c85b3), url(../img/jmb_bg.jpg) !important;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: difference;
+  color : white;
+  font-family: 'SegoeUILight';
+}
+
+/**/
+
+.icon-kategori {
+  background-image: linear-gradient(to left, #f9e109, #f7ad09), url(../img/jmb_bg.jpg) !important;
+  background-size: cover;
+  background-position: right;
+  cursor: pointer;
+  color : rgba(255, 255, 255, 0.74);
+  width: 100px;
+  height:100px;
+  border-radius: 100%;
+}
+
+.icon-kategori span {
+  margin: 0;
+  padding: 0;
+}
+
+/**/
+
+.daftar-musik {
+  background-image: url(../img/bg.jpg), linear-gradient(to right, rgb(235, 240, 5), rgb(241, 98, 7));
+  color : white;
+  background-position: bottom;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  border: none;
+}
+
+.upload-musik {
+  background-image: url(../img/bg4.jpg), linear-gradient(to right, rgb(228, 240, 5), rgb(241, 98, 7));
+  color : white;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: hard-light;
+  -moz-background-blend-mode: hard-light;
+  -webkit-background-blend-mode: hard-light;
+  border: none;
+}
+
+/**/
+
+#foto_profil_user {
+  width: 95%;
+  height: auto;
+  box-sizing: border-box;
+  border : linear-gradient(rgb(10, 217, 74), rgb(19, 186, 208)) 4px solid !important;
+}
+
+/**/
+
+#alert_gagal {
+  display: none;
+}
+
+#alert_sukses {
+  display: none;
+}
+
+/**/
+
+.toska {
+  background: #d44e15;
+  color : #ffffff;
+  border: #98350b solid .5px;
+}
+
+.judul {
+  cursor: pointer;
+}

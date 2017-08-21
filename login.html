@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="antrianApp">
+  <head>
+    <meta charset="utf-8">
+    <title ng-controller="titleLogin">{{ title }}</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/antrian.css">
+    <script src="assets/js/angular.min.js" charset="utf-8"></script>
+    <script src="assets/js/angular-route.min.js" charset="utf-8"></script>
+    <script src="assets/js/angular-cookies.min.js" charset="utf-8"></script>
+    <script src="assets/js/jquery.min.js" charset="utf-8"></script>
+    <script src="assets/js/antrian.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="wrapper" ng-controller="loginController">
+            <h3><span class="fa fa-sign-in fa-lg"></span>&nbsp;Login</h3>
+            <form class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><span class="fa fa-user fa-lg"></span></span>
+                <input ng-model="username" type="text" class="form-control" name="" placeholder="Username">
+              </div>
+              <br>
+              <div class="input-group">
+                <span class="input-group-addon"><span class="fa fa-asterisk fa-lg"></span></span>
+                <input type="password" ng-model="password" class="form-control" name="" placeholder="Password">
+              </div>
+              <hr>
+              <button type="submit" ng-click="login()" class="btn btn-success" name="button"><span class="fa fa-sign-in fa-lg"></span>&nbsp;Login</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </body>
+</html>
